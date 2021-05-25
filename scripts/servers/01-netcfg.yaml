@@ -1,0 +1,25 @@
+# This file describes the network interfaces available on your system
+# For more information, see netplan(5).
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eno5:
+      dhcp4: yes
+    ens1:
+      addresses:
+        - 198.19.200.30/24
+        - 198.19.10.0/31
+      routes:
+        - to: 198.19.10.0/24
+          via: 198.19.10.1
+        - to: 198.19.11.0/24
+          via: 198.19.10.1
+        - to: 198.19.12.0/24
+          via: 198.19.10.1
+        - to: 198.19.13.0/24
+          via: 198.19.10.1
+        - to: 198.19.14.0/24
+          via: 198.19.10.1
+        - to: 198.19.15.0/24
+          via: 198.19.10.1
